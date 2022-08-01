@@ -27,3 +27,12 @@ button {
     font-size: .8em;
     opacity: .7;
 }
+
+.icon-search {
+    background-color: var(--nav-color);
+    height: 1.8em;
+    padding-inline: .8em;
+    display: flex;
+    align-items: center;
+    border-radius: 0 .2em .2em 0;
+}

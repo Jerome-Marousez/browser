@@ -16,7 +16,7 @@
 <script>
 import {mapGetters} from "vuex";
 import NewTab from "@/components/window/NewTab";
-import NewTabA from "@/components/window/NewTabA";
+import SearchEngine from "@/components/window/SearchEngine";
 
 export default {
   name: "Window",
@@ -25,7 +25,7 @@ export default {
 
   components: {
     NewTab,
-    NewTabA,
+    SearchEngine,
   },
 
   props: {},

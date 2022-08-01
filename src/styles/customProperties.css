@@ -4,6 +4,8 @@
     --text-size: 1.3em;
     font-family: Roboto;
 
+    --svg-color-primary: var(--text-color);
+
     --nav-height: 1.5em;
     --nav-color: hsl(220, 10%, 32%);
     --searchBar-height: 2em;

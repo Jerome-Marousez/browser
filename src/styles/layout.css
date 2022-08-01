@@ -1,11 +1,19 @@
 input {
-    background-color: var(--window-bg);
     border: none;
     outline: none;
     color: var(--text-color);
+    background-color: var(--searchBar-color);
     padding-inline: .5em;
-    margin: .2em;
     border-radius: .2em;
+    line-height: 1.8em;
+}
+
+.input-search-bar {
+    background-color: var(--window-bg);
+}
+
+.search-bar {
+    border-radius: .2em 0 0 .2em;
 }
 
 ::placeholder {
@@ -13,13 +21,15 @@ input {
     opacity: .5;
 }
 
-.grow-in-enter-from,
-.grow-in-leave-to {
-    opacity: 0;
-    transform: scale(0.3);
+svg {
+    width: .9em;
+    height: .9em;
+}
+svg * {
+    fill: var(--text-color);
 }
 
-.grow-in-enter-active,
-.grow-in-leave-active {
-    transition: .3s ease-out;
+.search-bar-container {
+    display: flex;
+    align-items: center;
 }

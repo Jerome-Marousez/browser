@@ -1,9 +1,18 @@
 import { createStore } from 'vuex'
+import { v4 as uuid } from "uuid";
 
 export default createStore({
     state: {
         tabs: [],
-        currentTab: {},
+        currentTab: {
+            id: uuid(),
+            date: new Date(),
+            component: 'NewTab',
+            content: {
+                id: uuid(),
+                search: '',
+            },
+        },
     },
 
     mutations: {
@@ -17,16 +26,15 @@ export default createStore({
         },
         setCurrentTab(state, payload) {
             state.currentTab = state.tabs.filter(tab => tab.id === payload)[0]
-        }
+        },
+        openSearchEngine(state) {
+            state.currentTab.component = 'SearchEngine'
+        },
     },
 
     getters: {
-        getTabs(state) {
-            return state.tabs
-        },
-        getCurrentTab(state) {
-            return state.currentTab
-        }
+        getTabs: state => state.tabs,
+        getCurrentTab: state => state.currentTab,
     },
 
     actions: {

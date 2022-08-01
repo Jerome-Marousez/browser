@@ -67,6 +67,8 @@ export default {
   max-width: 10em;
   height: var(--nav-height);
   border-right: .1em solid var(--searchBar-color);
+  border-top: .1em solid var(--searchBar-color);
+  /*border-radius: 0 .3em 0 0;*/
   padding-left: .3em;
   display: flex;
   align-items: center;

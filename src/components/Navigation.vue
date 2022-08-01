@@ -13,7 +13,10 @@
                   id: this.newUuid(),
                   date: new Date(),
                   component: 'NewTab',
-                  content: {id: this.newUuid()},
+                  content: {
+                    id: this.newUuid(),
+                    search: '',
+                  },
                 })"
     >+</button>
   </div>
@@ -73,8 +76,11 @@ export default {
     this.addTab({
       id: this.newUuid(),
       date: new Date(),
-      component: 'NewTabA',
-      content: {id: this.newUuid()},
+      component: 'NewTab',
+      content: {
+        id: this.newUuid(),
+        search: '',
+      },
     })
   },
 

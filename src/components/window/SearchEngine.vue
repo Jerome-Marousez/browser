@@ -1,8 +1,8 @@
 <template>
 
-  <div class="newTab-container">
-    <input type="text" placeholder="Search..." v-model="search">
-    <div style="position: absolute; bottom: 0; font-size: .4em">{{content.id}} -- {{data.date}}</div>
+  <div class="search-engine-container search-bar">
+    searchEngine component
+    <div>Query: {{content.search}}</div>
   </div>
 
 
@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: "NewTab",
+  name: "SearchEngine",
 
   inject: [],
 
@@ -24,17 +24,18 @@ export default {
   emits: [],
 
   data() {
-    return {
-      content: this.data.content,
-      search: '',
-    }
+    return {}
   },
 
   provide() {
     return {}
   },
 
-  computed: {},
+  computed: {
+    content() {
+      return this.data.content
+    },
+  },
 
   methods: {},
 
@@ -52,7 +53,8 @@ export default {
 
 
 <style scoped>
-.newTab-container {
+
+.search-engine-container {
   position: relative;
   display: flex;
   flex-direction: column;
