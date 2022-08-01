@@ -8,7 +8,6 @@
       </button>
     </div>
 
-    <div style="position: absolute; bottom: 0; font-size: .4em">{{data.id}} -- {{content.id}} -- {{data.date}}</div>
   </div>
 
 

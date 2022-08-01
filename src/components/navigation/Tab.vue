@@ -3,6 +3,7 @@
   <button class="tab-container">
     {{ component }}
     <button
+        v-if="tabs.length > 1"
         class="btn-tab"
         @click="deleteTab(id)"
     >x</button>
@@ -13,7 +14,7 @@
 
 
 <script>
-import { mapMutations } from 'vuex'
+import {mapGetters, mapMutations} from 'vuex'
 
 export default {
   name: "Tab",
@@ -39,7 +40,11 @@ export default {
     return {}
   },
 
-  computed: {},
+  computed: {
+    ...mapGetters({
+      tabs: 'getTabs',
+    }),
+  },
 
   methods: {
     ...mapMutations({
@@ -69,7 +74,7 @@ export default {
   border-right: .1em solid var(--searchBar-color);
   border-top: .1em solid var(--searchBar-color);
   /*border-radius: 0 .3em 0 0;*/
-  padding-left: .3em;
+  padding-inline: .3em;
   display: flex;
   align-items: center;
   justify-content: center;

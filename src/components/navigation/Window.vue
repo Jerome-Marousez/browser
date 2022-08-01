@@ -3,9 +3,12 @@
   <div class="window-container">
     <Component :is="currentTab.component" :data="currentTab" />
 
+    <div style="margin-bottom: .5em;font-size: .8rem">CURRENT TAB: {{currentTab}}</div>
     <div v-for="(tab, id) in $store.state.tabs" style="margin-bottom: .5em; font-size: .8rem">
       {{tab}}
     </div>
+
+
 
   </div>
 
