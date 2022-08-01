@@ -1,0 +1,13 @@
+:root {
+
+    --text-color: white;
+    --text-size: 1.3em;
+    font-family: Roboto;
+
+    --nav-height: 1.5em;
+    --nav-color: hsl(220, 10%, 32%);
+    --searchBar-height: 2em;
+    --searchBar-color: hsl(220, 15%, 28%);
+
+    --window-bg: hsl(220, 15%, 20%);
+}
